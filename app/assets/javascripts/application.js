@@ -32,5 +32,10 @@ App = {
 
 
 $(document).ready(function() {
-  
+    // App.Routers.song = new App.Routers.Songs();
+
+      App.Collections.songs = new App.Collections.Songs();
+      App.Collections.songs.fetch();
+      App.Views.songList = new App.Views.SongList({collection: App.Collections.songs});
+
 });
