@@ -32,10 +32,12 @@ App = {
 
 
 $(document).ready(function() {
-    // App.Routers.song = new App.Routers.Songs();
+  App.Routers.song = new App.Routers.Song();
 
-      App.Collections.songs = new App.Collections.Songs();
-      App.Collections.songs.fetch();
-      App.Views.songList = new App.Views.SongList({collection: App.Collections.songs});
+  App.Collections.songs = new App.Collections.Songs();
+  App.Collections.songs.fetch();
+  App.Views.songList = new App.Views.SongList({collection: App.Collections.songs});
+
+  Backbone.history.start(); //starts router
 
 });
